@@ -1,14 +1,14 @@
 {
-  "name": "request-header-parser-microservice",
+  "name": "request-header-parser",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "http://www.github.com/imooreva"
+    "url": "https://github.com/imooreva/request-header-parser"
   },
   "author": "Ian Moore",
   "license": "ISC",
