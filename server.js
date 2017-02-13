@@ -13,8 +13,9 @@ app.use(express.static('./public'));
 app.listen(PORT, () => console.log('Express server is up on port', PORT));
 
 app.get('/headers', (req, res) => {
-    //console.log(req.headers);
-    let ipaddress = req.headers['X-Client-IP'] || req.connection.remoteAddress;
+    console.log(req.headers);
+    //let ipaddress = req.headers['X-Client-IP'] || req.connection.remoteAddress;
+    let ipaddress = req.headers['x-forwarded-for'] || req.connection.remoteAddress || req.socket.remoteAddress || req.connection.socket.remoteAddress;
     res.send({
         ipaddress,
         language: req.headers['accept-language'],
