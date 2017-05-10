@@ -18,3 +18,6 @@ app.get('/myinfo', (req, res) => {
     let software = req.headers['user-agent'];
     res.send({ IpAddress, language, software });
 });
+
+//handle console error by sending 'No Content' status
+app.get('/favicon.ico', (req, res) => res.sendStatus(204));
