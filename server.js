@@ -1,10 +1,14 @@
-const express = require('express');
-const PORT = process.env.PORT || 3000; //used for heroku
+var express = require('express');
+var path = require('path');
 
-//configure express app and start listening
+//set constants for express
+const port = process.env.PORT || 3000; //port used for Heroku, otherwise 3000
+const publicPath = path.join(__dirname, './public');
+
+//configure express and start listening
 var app = express();
-app.use(express.static('./public'));
-app.listen(PORT, () => console.log('Express server is up on port', PORT));
+app.use(express.static(publicPath));
+if (!module.parent) { app.listen(port, () => console.log(`Started up on port ${port}`)) }; //conditional statement prevents EADDRINUSE error when running mocha/supertest
 
 //pull headers from req and send JSON object to client
 app.get('/myinfo', (req, res) => {

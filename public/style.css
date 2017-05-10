@@ -2,9 +2,42 @@ body {
     background: #180332;
     color: #FFA472;
     font-family: 'Raleway', sans-serif;
-    font-size: 1.0rem;
+    font-size: 1.125rem;
 }
 
 p {
     color: #A0F8FF;
+}
+
+#hr1 {
+    border-top: 1px solid #AAAAAA;
+    margin-top: 2rem;
+}
+
+#footer {
+    margin-top: 2rem;
+}
+
+#footer>a {
+    text-decoration: none;
+}
+
+#footer>a:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 420px) {
+    #heading1 {
+        font-size: 1.5rem;
+    }
+    #heading2 {
+        font-size: 1.125rem;
+    }
+    body {
+        font-size: 0.875rem;
+    }
+    
+    #hr1, #footer {
+        margin-top: 1.25rem
+    }
 }
