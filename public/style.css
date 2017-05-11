@@ -1,16 +1,16 @@
 body {
     background: #180332;
-    color: #FFA472;
+    color: #FF8B4D;
     font-family: 'Raleway', sans-serif;
     font-size: 1.125rem;
 }
 
 p {
-    color: #A0F8FF;
+    color: #cefdfd;
 }
 
 #hr1 {
-    border-top: 1px solid #AAAAAA;
+    border: 1px solid #888888;
     margin-top: 2rem;
 }
 
@@ -19,6 +19,7 @@ p {
 }
 
 #footer>a {
+    color: #FF8B4d;
     text-decoration: none;
 }
 
